@@ -1,10 +1,11 @@
-import { eliminarPaciente } from "../../../backend/controllers/pacienteController"
+// import { eliminarPaciente } from "../../../backend/controllers/pacienteController"
 import usePacientes from "../hooks/usePacientes"
 
 const Paciente = ({paciente}) => {
     const { email, fecha, nombre, propietario, sintomas, _id } = paciente
 
-    const { setEdicion, eliminarPaciente } = usePacientes()
+    // const { setEdicion, eliminarPaciente } = usePacientes()
+    const { setEdicion } = usePacientes()
 
     const formatearFecha = fecha => {
         const nuevaFecha = new Date(fecha)
