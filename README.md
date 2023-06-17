@@ -1,4 +1,4 @@
-# MERN_APV_frontend  
+# MERN APV frontend  
 Este es un proyecto fullstack, especificamente stack mern cuyas funciones son:  
 -Administrar pacientes de veterinaria  
 -Crear cuentas de veterinarios  
