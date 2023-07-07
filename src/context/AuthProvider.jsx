@@ -40,8 +40,8 @@ const AuthProvider = ({ children }) => {
     const cerrarSesion = () => {
         localStorage.removeItem('token')
         setAuth({})
-        // setCargando(true)
-
+        //innecesario ya que cargando se setea como true al recargar la pag pero tambien se ejecuta el useEffect que setea cargando como false
+        // setCargando(false)
     }
 
     const actualizarPerfil = async datos => {
@@ -57,6 +57,8 @@ const AuthProvider = ({ children }) => {
 
         try {
             const { data } = await clienteAxios.put(`/veterinarios/perfil/${datos._id}`, datos, config)
+
+            setAuth(data)
 
             return {
                 msg: 'Almacenado correctamente'

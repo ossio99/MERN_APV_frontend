@@ -26,6 +26,9 @@ const Login = () => {
             const res = await clienteAxios.post('/veterinarios/login', { email, password })
             // console.log(res);
             localStorage.setItem('token', res.data.token)
+            //seteamos auth temporalmente para que no marque error en el componente RutaProtegida
+            //ya que este solo renderizara el contenido si auth tiene algo
+            //de lo contrario redireccionara a login
             setAuth(res.data)
             navigate('/admin')
         } catch (error) {
